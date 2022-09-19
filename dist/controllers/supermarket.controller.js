@@ -24,17 +24,24 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
+// The errors in this function are not handled correctly
 exports.list = (req, res) => {
     const dataPath = './data/supermarkets.json';
-    var supermarkets = [];
-    fs.readFile(dataPath, 'utf-8', (err, data) => {
-        if (err) {
-            throw (err);
-        }
-        console.log(data);
-        const { supermarkets } = JSON.parse(data);
-        return res.status(200).send(supermarkets);
-    });
-    return res.status(400);
+    try {
+        fs.readFile(dataPath, 'utf-8', (err, data) => {
+            if (err) {
+                throw (err);
+            }
+            const { supermarkets } = JSON.parse(data);
+            return res.status(200).send(supermarkets);
+        });
+    }
+    catch (error) {
+        console.error(`file path '${dataPath}' could not be loaded`);
+        return res.status(400).send({
+            error: `Couldn't load data from path '${dataPath}'`,
+        });
+    }
+    ;
 };
 //# sourceMappingURL=supermarket.controller.js.map
