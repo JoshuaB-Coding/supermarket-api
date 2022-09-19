@@ -3,7 +3,7 @@ import { Supermarkets } from '../models/supermarkets.models';
 import * as fs from 'fs';
 
 // The errors in this function are not handled correctly
-exports.list = (req: Request, res: Response) => {
+exports.supermarkets = (req: Request, res: Response) => {
     const dataPath = './data/supermarkets.json';
 
     try {

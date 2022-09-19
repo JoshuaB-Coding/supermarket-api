@@ -22,8 +22,8 @@ export const endpoints: Endpoint[] = [
     },
     {
         method: 'GET',
-        endpoint: '/v1/supermarkets/list',
-        controller: SupermarketsController.list,
+        endpoint: '/v1/supermarkets',
+        controller: SupermarketsController.supermarkets,
     },
     {
         method: 'POST',

@@ -1,9 +1,8 @@
 import express from 'express';
-import { Endpoint } from './endpoints';
-const TestController = require('../controllers/test.controller');
-const { Endpoint, endpoints } = require('./endpoints');
+import cors from 'cors';
+import { Endpoint, endpoints } from './endpoints';
+import { TestsController } from '../controllers/controllers';
 const app = express();
-const cors = require('cors');
 const port = 3000;
 
 app.use(cors());
@@ -19,7 +18,7 @@ endpoints.filter((endpoint: Endpoint) => endpoint.method === 'GET').forEach((end
 });
 
 app.get('/tests', [
-  TestController.tests
+  TestsController.tests
 ]);
 
 app.get('/test', (req, res) => {
