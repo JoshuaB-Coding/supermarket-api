@@ -1,16 +1,24 @@
 {
     "supermarkets": [
         {
-            "id": "001",
+            "id": "01",
             "name": "The Superstore"
         },
         {
-            "id": "002",
+            "id": "02",
             "name": "PennyWorld"
         },
         {
-            "id": "003",
+            "id": "03",
             "name": "Kitchen Planet"
+        },
+        {
+            "id": "04",
+            "name": "MegaMart"
+        },
+        {
+            "id": "05",
+            "name": "Bargain Foods"
         }
     ]
 }
