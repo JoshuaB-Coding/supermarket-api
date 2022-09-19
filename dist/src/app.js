@@ -7,7 +7,9 @@ const express_1 = __importDefault(require("express"));
 const TestController = require('../controllers/test.controller');
 const { Endpoint, endpoints } = require('./endpoints');
 const app = (0, express_1.default)();
+const cors = require('cors');
 const port = 3000;
+app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });

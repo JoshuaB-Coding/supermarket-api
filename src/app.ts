@@ -3,7 +3,10 @@ import { Endpoint } from './endpoints';
 const TestController = require('../controllers/test.controller');
 const { Endpoint, endpoints } = require('./endpoints');
 const app = express();
+const cors = require('cors');
 const port = 3000;
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
