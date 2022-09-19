@@ -1,0 +1,1 @@
+export const TestsController = require('./test.controller');
