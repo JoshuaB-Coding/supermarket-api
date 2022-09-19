@@ -6,19 +6,24 @@ exports.endpoints = [
     {
         method: 'GET',
         endpoint: '/v1/tests',
-        controller: controllers_1.TestsController.tests
+        controller: controllers_1.TestsController.tests,
     },
     {
         method: 'GET',
         endpoint: '/v1/ping',
         controller: (req, res) => {
-            res.send("To the moon!");
-        }
+            res.send("v1 working!");
+        },
+    },
+    {
+        method: 'GET',
+        endpoint: '/v1/supermarkets/list',
+        controller: controllers_1.SupermarketsController.list,
     },
     {
         method: 'POST',
         endpoint: '/v1/post',
-        controller: []
-    }
+        controller: [],
+    },
 ];
 //# sourceMappingURL=endpoints.js.map

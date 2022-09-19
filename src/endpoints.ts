@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import { TestsController } from "../controllers/controllers";
+import { TestsController, SupermarketsController } from "../controllers/controllers";
 
 export interface Endpoint {
     method: 'GET' | 'POST' | 'DELETE';
@@ -19,6 +19,11 @@ export const endpoints: Endpoint[] = [
         controller: (req: Request, res: Response) => {
             res.send("v1 working!");
         },
+    },
+    {
+        method: 'GET',
+        endpoint: '/v1/supermarkets/list',
+        controller: SupermarketsController.list,
     },
     {
         method: 'POST',

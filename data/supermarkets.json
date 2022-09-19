@@ -1,0 +1,16 @@
+{
+    "supermarkets": [
+        {
+            "id": "001",
+            "name": "The Superstore"
+        },
+        {
+            "id": "002",
+            "name": "PennyWorld"
+        },
+        {
+            "id": "003",
+            "name": "Kitchen Planet"
+        }
+    ]
+}
