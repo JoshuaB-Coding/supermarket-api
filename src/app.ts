@@ -27,5 +27,5 @@ app.get('/test', (req, res) => {
 });
 
 app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+  return console.log(`CORS-enabled Express is listening at http://localhost:${port}`);
 });
